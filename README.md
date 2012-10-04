@@ -13,7 +13,7 @@ git diffgist master           # diff between master and current HEAD
 ### Install ###
 ```bash
 sudo gem install jist
-sudo curl https://raw.github.com/pagefold/git-diffgist/master/git-diffgist > $(dirname $(which git))/git-diffgist
+sudo curl -o $(dirname $(which git))/git-diffgist https://raw.github.com/pagefold/git-diffgist/master/git-diffgist
 ```
 
 ### Requirements ###
