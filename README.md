@@ -4,11 +4,13 @@ git-diffgist
 Automatically create a GitHub Gist from a git diff, with a summary of files changed.
 
 ### Usage ###
-    `git diffgist SHA1 SHA2`
-    `git diffgist master`
+```bash
+git diffgist SHA1 SHA2
+git diffgist master
+```
 
 ## Requirements ##
-* Requires the (https://github.com/ConradIrwin/jist "jist") gem.
+* Requires the [jist](https://github.com/ConradIrwin/jist) gem.
 
 
 
