@@ -7,8 +7,28 @@ if [[ ! -d "${HOME}/.gitdiffs" ]]; then
   mkdir ${HOME}/.gitdiffs
 fi
 
+if [[ $1 == "" ]]; then
+  sourcebranch=master
+else
+  sourcebranch=$1
+fi
+
+if [[ $2 == "" ]]; then
+  diffbranch=$branch
+else
+  diffbranch=$2
+fi
+
 # Write the diff between master and this branch to a tmp file
 filename="${HOME}/.gitdiffs/$branch.$(date +'%Y%m%d.%H%M%S').diff"
-git diff master > $filename
-jist -d "$branch" -o  $filename
+
+printf "GIT DIFF SUMMARY\n" >  $filename
+printf "================\n\n" >> $filename
+git diff --name-status $sourcebranch..$diffbranch >> $filename
+printf "\n\n" >> $filename
+
+printf "GIT DIFF DETAILS\n" >> $filename
+printf "================\n\n" >> $filename
+git diff $sourcebranch..$diffbranch >> $filename
+jist -d "$diffbranch" -o  $filename
 
