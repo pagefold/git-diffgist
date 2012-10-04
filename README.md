@@ -9,9 +9,10 @@ git diffgist SHA1 SHA2
 git diffgist master
 ```
 
-## Requirements ##
-* Requires the [jist](https://github.com/ConradIrwin/jist) gem.
-
+### Requirements ###
+* [GitHub account](http://github.com)
+* [jist](https://github.com/ConradIrwin/jist) gem
+* [Git](http://git-scm.com/)
 
 
 
