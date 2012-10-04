@@ -25,6 +25,11 @@ sudo curl -o $(dirname $(which git))/git-diffgist https://raw.github.com/pagefol
 * [Git](http://git-scm.com/)
 
 
+### Additional Notes ###
+When creating gists, the command will store timestamp-versioned text files under a _.gitdiffs_ directory in your home directory.
+
+This has the benenfit of setting the filename of the Gist as well as an archive with timestamps for when each gist was generated.
+
 
 ## License ##
 Copyright (C) 2012 Brandon McKinney
