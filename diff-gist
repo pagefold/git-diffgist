@@ -3,12 +3,11 @@
 # Get the branch name
 branch="$(git branch | grep "\*" | awk '{print $2}')"
 
-if [ ! -d "~/.gitdiffs" ]; then
-  mkdir ~/.gitdiffs
+if [[ ! -d "${HOME}/.gitdiffs" ]]; then
+  mkdir ${HOME}/.gitdiffs
 fi
 
 # Write the diff between master and this branch to a tmp file
-git diff master..$branch > ~/.gitdiffs/$branch.diff
-
-gist -p -d "$branch Diff" ~/.gitdiffs/$branch.diff
+git diff master > ${HOME}/.gitdiffs/$branch.diff
+jist -d "$branch Diff" -o  ${HOME}/.gitdiffs/$branch.diff 
 
