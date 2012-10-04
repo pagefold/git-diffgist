@@ -12,8 +12,11 @@ git diffgist master           # diff between master and current HEAD
 
 ### Install ###
 ```bash
-sudo gem install jist
-sudo curl -o $(dirname $(which git))/git-diffgist https://raw.github.com/pagefold/git-diffgist/master/git-diffgist
+sudo gem install jist  # if not already installed
+sudo curl -o $(dirname $(which git))/git-diffgist https://raw.github.com/pagefold/git-diffgist/master/git-diffgist && sudo chmod 755 $(dirname $(which git))/git-diffgist
+
+# Note that the install will overwrite an existing file at this location.
+# It will attempt to install next to your environment's git at git-diffgist.
 ```
 
 ### Requirements ###
