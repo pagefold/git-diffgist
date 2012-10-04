@@ -5,14 +5,15 @@ Automatically create a GitHub Gist from a git diff, with a summary of files chan
 
 ### Usage ###
 ```bash
-git diffgist SHA1 SHA2  # diff between two commits
-git diffgist master     # diff between master and current HEAD
+git diffgist SHA1 SHA2        # diff between two commits
+git diffgist master myBranch  # diff between master and myBranch's HEAD
+git diffgist master           # diff between master and current HEAD
 ```
 
 ### Install ###
 ```bash
 sudo gem install jist
-if [[ ! -f "$(dirname $(which git))" ]]; then wget https://raw.github.com/pagefold/git-diffgist/master/git-diffgist > $(dirname $(which git)); fi
+if [[ ! -f "$(dirname $(which git))/git-diffgist" ]]; then wget https://raw.github.com/pagefold/git-diffgist/master/git-diffgist > $(dirname $(which git))/git-diffgist; fi
 ```
 
 ### Requirements ###
