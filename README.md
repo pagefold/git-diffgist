@@ -5,13 +5,13 @@ Automatically create a GitHub Gist from a git diff, with a summary of files chan
 
 ### Usage ###
 ```bash
-git diffgist SHA1 SHA2
-git diffgist master
+git diffgist SHA1 SHA2  # diff between two commits
+git diffgist master     # diff between master and current HEAD
 ```
 
 ### Requirements ###
 * [GitHub account](http://github.com)
-* [jist](https://github.com/ConradIrwin/jist) gem
+* [jist gem](https://github.com/ConradIrwin/jist)
 * [Git](http://git-scm.com/)
 
 
