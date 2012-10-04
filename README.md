@@ -13,7 +13,7 @@ git diffgist master           # diff between master and current HEAD
 ### Install ###
 ```bash
 sudo gem install jist
-if [[ ! -f "$(dirname $(which git))/git-diffgist" ]]; then wget https://raw.github.com/pagefold/git-diffgist/master/git-diffgist > $(dirname $(which git))/git-diffgist; fi
+if [[ ! -f "$(dirname $(which git))/git-diffgist" ]]; then sudo wget https://raw.github.com/pagefold/git-diffgist/master/git-diffgist > $(dirname $(which git))/git-diffgist; fi
 ```
 
 ### Requirements ###
