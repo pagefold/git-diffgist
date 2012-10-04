@@ -8,6 +8,7 @@ if [[ ! -d "${HOME}/.gitdiffs" ]]; then
 fi
 
 # Write the diff between master and this branch to a tmp file
-git diff master > ${HOME}/.gitdiffs/$branch.diff
-jist -d "$branch Diff" -o  ${HOME}/.gitdiffs/$branch.diff 
+filename="${HOME}/.gitdiffs/$branch.$(date +'%Y%m%d.%H%M%S').diff"
+git diff master > $filename
+jist -d "$branch Diff" -o  $filename
 
