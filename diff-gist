@@ -1,8 +1,14 @@
-#!/usr/bin/env node
+#!/usr/bin/env bash
 
-var git = require('git-rev');
+# Get the branch name
+branch="$(git branch | grep "\*" | awk '{print $2}')"
 
-git.branch(function(b){
-  console.log(b);
-});
+if [ ! -d "~/.gitdiffs" ]; then
+  mkdir ~/.gitdiffs
+fi
+
+# Write the diff between master and this branch to a tmp file
+git diff master..$branch > ~/.gitdiffs/$branch.diff
+
+gist -p -d "$branch Diff" ~/.gitdiffs/$branch.diff
 
