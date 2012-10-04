@@ -9,6 +9,12 @@ git diffgist SHA1 SHA2  # diff between two commits
 git diffgist master     # diff between master and current HEAD
 ```
 
+### Install ###
+```bash
+sudo gem install jist
+if [[ ! -f "$(dirname $(which git))" ]]; then wget https://raw.github.com/pagefold/git-diffgist/master/git-diffgist > $(dirname $(which git)); fi
+```
+
 ### Requirements ###
 * [GitHub account](http://github.com)
 * [jist gem](https://github.com/ConradIrwin/jist)
