@@ -10,5 +10,5 @@ fi
 # Write the diff between master and this branch to a tmp file
 filename="${HOME}/.gitdiffs/$branch.$(date +'%Y%m%d.%H%M%S').diff"
 git diff master > $filename
-jist -d "$branch Diff" -o  $filename
+jist -d "$branch" -o  $filename
 
